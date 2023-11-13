@@ -23,4 +23,4 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
 # Call the proprietary setup
-$(call inherit-product, vendor/huawei/prague/prague-vendor.mk)
+$(call inherit-product, vendor/huawei/berlin/berlin-vendor.mk)

@@ -8,14 +8,14 @@
 
 function blob_fixup() {
     case "${1}" in
-        odm/lib64/hwcam/hwcam.hi6250.m.PRAGUE.so)
+        odm/lib64/hwcam/hwcam.hi6250.m.BERLIN.so)
             "${PATCHELF}" --add-needed "libtinyxml2_shim.so" "${2}"
             ;;
         vendor/etc/libnfc-brcm.conf)
             sed -i 's\/data/nfc\/data/vendor/nfc\g' "${2}"
             ;;
         vendor/etc/libnfc-nxp.conf)
-            sed -i 's|libpn551_fw_10_05_03_64bits.so|libpn551_fw.so|g' "${2}"
+            sed -i 's|libpn548ad_fw_10.01.1C_64bits.so|libpn551_fw.so|g' "${2}"
             ;;
     esac
 }
@@ -28,7 +28,7 @@ fi
 
 set -e
 
-export DEVICE=prague
+export DEVICE=berlin
 export DEVICE_COMMON=hi6250-8-common
 export VENDOR=huawei
 export VENDOR_COMMON=${VENDOR}

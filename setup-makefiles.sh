@@ -8,7 +8,7 @@
 
 set -e
 
-export DEVICE=prague
+export DEVICE=berlin
 export DEVICE_COMMON=hi6250-8-common
 export VENDOR=huawei
 export VENDOR_COMMON=${VENDOR}
